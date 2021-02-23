@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DefaultController!{% endblock %}
+{% block stylesheets %}
+
+    <link href="{{ asset('css/index.css') }}" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <section class="header">
+            <h1>Bienvenue sur PPE Symfony</h1>
+        </section>
+        <section class="content">
+
+            {% if is_granted('ROLE_SUPER_ADMIN') %}
+                <div class="actionService">
+                    <a href="{{ path("superadmin") }}">Accéder au panel d'administration</a>
+                </div>
+            {% endif %}
+            <div class="listeChoix">
+                <div class="choixServices">
+                    <p>Liste des services :</p>
+                    <i class="fas fa-hospital-user" style="font-size: 75px; color: black;"></i>
+                    <button><a href="{{ path("service")}}">Voir</a></button>
+                </div>
+                <div class="choixPatients">
+                    <p>Liste des patients :</p>
+                    <i class="fas fa-user-injured" style="font-size: 75px; color: black;"></i>
+                    <a href="{{ path("patient")}}">
+                    <button>Voir</button></a>
+                </div>
+                <div class="choixSejours">
+                    <p>Liste des séjours :</p>
+                    <i class="fas fa-procedures" style="font-size: 75px; color: black;"></i>
+                    <button>Voir</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+{% endblock %}

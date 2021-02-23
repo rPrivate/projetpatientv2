@@ -1,0 +1,81 @@
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+/* Container */
+.container {
+    height: 100vh;
+    width: 100%;
+
+}
+
+.container .content {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .content form {
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    box-shadow: 5px 20px 20px rgba(0,0,0,.7), -5px 20px 20px rgba(0,0,0,.7);
+    padding-left: 5rem;
+
+}
+
+.container .content form div:nth-child(3) input {
+    text-align: center;
+}
+
+.container .content form input {
+    color : #fff;
+    font-size: 1.1rem;
+    border : none;
+    border-bottom: 2px solid #fff;
+    margin-top: 3rem;
+    margin-left: 1rem;
+    background: transparent;
+    outline: none;
+    height: 25px;
+    width: 150px;
+}
+
+.container .content form label {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    height: 25px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 3px;
+}
+
+.container .content form label:after{
+    content: ' :';
+}
+
+.container .content form #form_Valider {
+    margin-top : 5rem;
+    margin-right: 5rem;
+    border-radius: 5px;
+    border: 2px solid #333;
+    background-color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding : 5px;
+    outline: none;
+    cursor: pointer;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+}

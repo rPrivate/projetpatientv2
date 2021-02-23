@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PatientController!{% endblock %}
+{% block stylesheets %}
+    <link href="{{ asset('css/patientAdd.css') }}" rel="stylesheet"/>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <section class="header">
+            <h1>Ajouter un patient</h1>
+        </section>
+        <div class="content">
+            {{ form(form) }}
+        </div>
+    </div>
+
+{% endblock %}

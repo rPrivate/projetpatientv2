@@ -1,0 +1,80 @@
+
+/* Container */
+.container {
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+/* Content */
+.content {
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.content .actionChambre {
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.content .actionChambre a {
+    text-decoration: none;
+    color: black;
+    margin-right: 2rem;
+    padding: 5px;
+    border : 2px solid #333;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.content .listeChambres {
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.content .listeChambres .choixChambre {
+    height: 200px;
+    width: 200px;
+    border : 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin : 2rem;
+    box-shadow: 2px 5px 5px rgba(0,0,0,.2);
+}
+
+.content .listeChambres .choixChambre h4 {
+    margin-bottom: 2rem;
+}
+
+.content .listeChambres .choixChambre h5 {
+    margin-bottom: 2rem;
+}
+
+.content .listeChambres .choixChambre .buttons button {
+    height: 25px;
+    width: 70px;
+    background-color: transparent;
+    font-weight: 700;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    margin-right: 1rem;
+
+}
+
+.content .listeChambres .choixChambre .buttons button a {
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    {% if is_granted('ROLE_PATIENT') and not is_granted('ROLE_SECRETAIRE') %}
+        <button type="button" class="btn btn-secondary btn-lg"><a style="color: white" href="{{ path("medecinliste") }}">Prendre Rendez-vous</a></button>
+        <button type="button" class="btn btn-secondary btn-lg"><a style="color: white" href="{{ path("rdv_list") }}">Voir mes rendez-vous</a></button>
+    {% endif %}
+    {% if is_granted('ROLE_SECRETAIRE') %}
+        <button type="button" class="btn btn-secondary btn-lg"><a style="color: white" href="{{ path("rdv_listAll") }}">Voir les demandes de rendez-vous</a></button>
+        <button type="button" class="btn btn-secondary btn-lg"><a style="color: white" href="{{ path("medecinliste") }}">Voir les médecins</a></button>
+
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ServiceController!{% endblock %}
+{% block stylesheets %}
+
+    <link href="{{ asset('css/serviceAdd.css') }}" rel="stylesheet"/>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <section class="header">
+            <h1>Ajouter un service</h1>
+        </section>
+        <section class="content">
+            {{ form(form) }}
+        </section>
+    </div>
+{% endblock %}

@@ -1,0 +1,31 @@
+.content  {
+    height : 80vh;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.content .contentBx {
+    height: 150px;
+    width: 150px;
+    box-shadow: 3px 15px 15px rgba(0,0,0,.7);
+    margin : 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.content .contentBx p {
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+.content .contentBx .choix a {
+    text-decoration: none;
+    border-bottom: 2px solid #333;
+    color: #333;
+}

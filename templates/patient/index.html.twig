@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PatientController!{% endblock %}
+{% block stylesheets %}
+    <link href="{{ asset('css/patient.css') }}" rel="stylesheet"/>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <section class="header">
+            <h1>Ajouter un patient</h1>
+        </section>
+        <section class="content">
+            <div class="rechercher">
+                {{ form(form) }}
+            </div>
+            <div class="results">
+                {% for p in patient %}
+                    <div class="card">
+                            <h5 class="card-title">{{ p.Nom }} {{ p.Prenom }}</h5>
+                            <p class="card-text">Info :  {{ p.datenaissance|date("m/d/Y") }} </p>
+                            <button>
+                                <a href="/patient/mod/{{ p.id }}" class="card-link">Modifier Patient</a>
+                            </button>
+                    </div>
+                {% endfor%}
+            </div>
+        </section>
+    </div>
+{% endblock %}

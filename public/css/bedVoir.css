@@ -1,0 +1,66 @@
+.container {
+    height: 100vh;
+    width: 100%;
+}
+
+.container .content {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.container .content .actionChambre {
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.content .actionChambre a {
+    text-decoration: none;
+    color: black;
+    margin-right: 2rem;
+    padding: 5px;
+    border : 2px solid #333;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.content .listeChambres {
+    min-height: 75vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .listeChambres .choixChambre {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin : 2rem;
+    box-shadow: 2px 15px 15px rgba(0,0,0,.7);
+}
+
+.content .listeChambres .choixChambre h4 {
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.content .listeChambres .choixChambre h5 {
+    margin-bottom: 5rem;
+    font-size: 1.5rem;
+}
+
+.content .listeChambres .choixChambre p {
+    font-size: 1.5rem;
+}

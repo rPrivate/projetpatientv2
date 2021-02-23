@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MedecinListController!{% endblock %}
+
+{% block body %}
+    {% for medecin in medecins %}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Dr.{{ medecin.prenom }} {{ medecin.nom }}</h5>
+            <p class="card-text">{{ medecin.specialite }}</p>
+            <a href="{{ path("medecin", {id : medecin.id})}}" class="btn btn-primary">Consulter les horaires</a>
+        </div>
+    </div>
+    {% endfor %}
+
+{% endblock %}

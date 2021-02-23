@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Container */
+.container {
+    height: 100vh;
+    width: 100%;
+}
+
+
+/* Content */
+.content {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.content .recherche {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .recherche form input {
+    border : none;
+    border-bottom: 2px solid #333;
+    height: 25px;
+    width: 300px;
+    outline: none;
+    font-size: 1.1em;
+}
+
+.content .recherche form button {
+    height: 25px;
+    width: 100px;
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.content .listeChoix {
+    height: 80vh;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.content .listeChoix .choixServices, .content .listeChoix .choixPatients, .content .listeChoix .choixSejours {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    border : 1px solid #333;
+    box-shadow: 2px 5px 5px rgba(0,0,0,.2);
+}
+
+.content .listeChoix .choixServices p, .content .listeChoix .choixPatients p, .content .listeChoix .choixSejours p {
+    margin-left: 2rem;
+    font-weight: 500;
+    border-bottom: 2px solid #333;
+}
+
+.content .listeChoix .choixServices button, .content .listeChoix .choixPatients button, .content .listeChoix .choixSejours button {
+    height: 25px;
+    width: 80px;
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.content .listeChoix .choixServices button a, .content .listeChoix .choixPatients button a, .content .listeChoix .choixSejours button a {
+    text-decoration: none;
+    color : black;
+}

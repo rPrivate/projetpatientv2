@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c62c0c92-5ebb-49d8-8812-6459c8b9f0cc" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Rhummboy &lt;romainpanii@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/projetpatientv2" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-code" />
+      <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/expression-language" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-link" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/notifier" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
+      <path value="$PROJECT_DIR$/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/symfony/apache-pack" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1lKGCXu6JfMMytxRwEX3r1jUFJH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\patient_symfony\src\Controller" />
+      <recent name="C:\wamp64\www\patient_symfony\src\Controller\RDV" />
+      <recent name="C:\wamp64\www\patient_symfony\src\Controller\Admin" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c62c0c92-5ebb-49d8-8812-6459c8b9f0cc" name="Default Changelist" comment="" />
+      <created>1607338243074</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607338243074</updated>
+      <workItem from="1607338244745" duration="968000" />
+      <workItem from="1607339228753" duration="434000" />
+      <workItem from="1607339680614" duration="5169000" />
+      <workItem from="1607418346367" duration="894000" />
+      <workItem from="1607420557063" duration="1373000" />
+      <workItem from="1607549305353" duration="1703000" />
+      <workItem from="1607586507715" duration="887000" />
+      <workItem from="1607807838821" duration="13438000" />
+      <workItem from="1607938668287" duration="932000" />
+      <workItem from="1607953470302" duration="1332000" />
+      <workItem from="1607957473638" duration="25000" />
+      <workItem from="1607976415192" duration="781000" />
+      <workItem from="1608038629674" duration="1444000" />
+      <workItem from="1608055016907" duration="1283000" />
+      <workItem from="1608124092027" duration="21434000" />
+      <workItem from="1608186891925" duration="8627000" />
+      <workItem from="1608494222906" duration="18000" />
+      <workItem from="1612564629933" duration="35000" />
+      <workItem from="1612565778356" duration="1190000" />
+      <workItem from="1612616072722" duration="6311000" />
+      <workItem from="1612625895634" duration="1170000" />
+      <workItem from="1612639775317" duration="1920000" />
+      <workItem from="1612655541674" duration="2058000" />
+      <workItem from="1612690898097" duration="4740000" />
+      <workItem from="1612702831880" duration="4902000" />
+      <workItem from="1612718646710" duration="4417000" />
+      <workItem from="1613938403706" duration="2122000" />
+      <workItem from="1614083893449" duration="595000" />
+      <workItem from="1614084695686" duration="134000" />
+    </task>
+    <task id="LOCAL-00001" summary="bdd - user - registration - login">
+      <created>1607345035674</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607345035674</updated>
+    </task>
+    <task id="LOCAL-00002" summary="bdd - user - registration - login">
+      <created>1607354087655</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607354087655</updated>
+    </task>
+    <task id="LOCAL-00003" summary="BedList Controller">
+      <created>1607421103249</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607421103249</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Chambre">
+      <created>1607550278817</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607550278817</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Préparation du controller qui va afficher les chambres reliés à un service - A faire : travailler avec le controller de mathieu pour pouvoir récuperer l'id du service correspondant.">
+      <created>1607550793173</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607550793173</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Création entité Lit">
+      <created>1607586786040</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607586786040</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Recréation entité">
+      <created>1607812592355</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1607812592355</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Partie admin créée">
+      <created>1607822477647</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607822477647</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Restrictions des accès et des affichages selon le type de compte utilisé.">
+      <created>1608135932860</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1608135932861</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Modification chambre">
+      <created>1608150820751</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1608150820751</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Résolution problèmes gestion des accès">
+      <created>1608156472055</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1608156472055</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Création de formulaire pour la création de comptes Admin ou Infirmier">
+      <created>1608158991827</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1608158991827</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Ajout du type de compte sur la liste des utilisateurs">
+      <created>1608198111045</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1608198111046</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="bdd - user - registration - login" />
+    <MESSAGE value="BedList Controller" />
+    <MESSAGE value="Chambre" />
+    <MESSAGE value="Préparation du controller qui va afficher les chambres reliés à un service - A faire : travailler avec le controller de mathieu pour pouvoir récuperer l'id du service correspondant." />
+    <MESSAGE value="Création entité Lit" />
+    <MESSAGE value="Recréation entité" />
+    <MESSAGE value="Partie admin créée" />
+    <MESSAGE value="Restrictions des accès et des affichages selon le type de compte utilisé." />
+    <MESSAGE value="Modification chambre" />
+    <MESSAGE value="Résolution problèmes gestion des accès" />
+    <MESSAGE value="Création de formulaire pour la création de comptes Admin ou Infirmier" />
+    <MESSAGE value="Ajout du type de compte sur la liste des utilisateurs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout du type de compte sur la liste des utilisateurs" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2472" y="490" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612703259786">
+      <screen x="1920" y="270" width="1536" height="832" />
+    </state>
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.270.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608158075789" />
+    <state x="2472" y="490" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.270.1536.832/0.0.1920.1040@1920.270.1536.832" timestamp="1612703259786" />
+    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1608198109627">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="585" y="88" key="CommitChangelistDialog2/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607421102495" />
+    <state x="2388" y="0" key="CommitChangelistDialog2/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1607354086971" />
+    <state x="585" y="88" key="CommitChangelistDialog2/1920.270.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608198109627" />
+    <state x="2530" y="270" key="CommitChangelistDialog2/1920.270.1536.832/0.0.1920.1040@1920.270.1536.832" timestamp="1608135931421" />
+    <state x="1920" y="270" key="DiffContextDialog" timestamp="1607812574621">
+      <screen x="1920" y="270" width="1536" height="832" />
+    </state>
+    <state x="184" y="86" key="DiffContextDialog/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607420682551" />
+    <state x="1920" y="270" key="DiffContextDialog/1920.270.1536.832/0.0.1920.1040@1920.270.1536.832" timestamp="1607812574621" />
+    <state x="2512" y="490" key="FileChooserDialogImpl" timestamp="1612720356669">
+      <screen x="1920" y="270" width="1536" height="832" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607420577580" />
+    <state x="740" y="275" key="FileChooserDialogImpl/1920.270.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608157423477" />
+    <state x="2512" y="490" key="FileChooserDialogImpl/1920.270.1536.832/0.0.1920.1040@1920.270.1536.832" timestamp="1612720356669" />
+    <state x="184" y="86" key="MergeDialog" timestamp="1608150689922">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="86" key="MergeDialog/1920.270.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608150689922" />
+    <state x="739" y="243" key="NewPhpClassDialog" timestamp="1607550474620">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="739" y="243" key="NewPhpClassDialog/1920.270.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607550474620" />
+    <state x="2524" y="606" key="NewPhpFileDialog" timestamp="1612617080220">
+      <screen x="1920" y="270" width="1536" height="832" />
+    </state>
+    <state x="2524" y="606" key="NewPhpFileDialog/1920.270.1536.832/0.0.1920.1040@1920.270.1536.832" timestamp="1612617080220" />
+    <state x="2509" y="385" key="RollbackChangesDialog" timestamp="1607811350540">
+      <screen x="1920" y="270" width="1536" height="832" />
+    </state>
+    <state x="2509" y="385" key="RollbackChangesDialog/1920.270.1536.832/0.0.1920.1040@1920.270.1536.832" timestamp="1607811350540" />
+    <state x="553" y="253" key="Vcs.Push.Dialog.v2" timestamp="1608198118036">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607421085419" />
+    <state x="553" y="253" key="Vcs.Push.Dialog.v2/1920.270.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608198118036" />
+    <state x="2362" y="472" key="Vcs.Push.Dialog.v2/1920.270.1536.832/0.0.1920.1040@1920.270.1536.832" timestamp="1608135935908" />
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608197485389">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607419231169" />
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.270.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608197485389" />
+    <state x="2542" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.270.1536.832/0.0.1920.1040@1920.270.1536.832" timestamp="1607807844027" />
+    <state x="1920" y="270" width="1115" height="810" key="dock-window-1" timestamp="1607814719147">
+      <screen x="1920" y="270" width="1536" height="832" />
+    </state>
+    <state x="1920" y="270" width="1115" height="810" key="dock-window-1/1920.270.1536.832/0.0.1920.1040@1920.270.1536.832" timestamp="1607814719147" />
+    <state x="2418" y="450" width="538" height="543" key="search.everywhere.popup" timestamp="1612617088474">
+      <screen x="1920" y="270" width="1536" height="832" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.270.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608141959945" />
+    <state x="2418" y="450" width="538" height="543" key="search.everywhere.popup/1920.270.1536.832/0.0.1920.1040@1920.270.1536.832" timestamp="1612617088474" />
+  </component>
+</project>

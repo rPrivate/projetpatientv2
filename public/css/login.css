@@ -1,0 +1,76 @@
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Container */
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background : url("https://images.unsplash.com/photo-1596541223130-5d31a73fb6c6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=1080");
+    -webkit-background-size: cover;
+    background-size: cover;
+
+}
+
+.loginBx {
+    width: 400px;
+    height: 400px;
+    color: #000;
+    padding: 60px 30px;
+    box-shadow: 8px 8px 50px #000;
+}
+
+.loginBx h1 {
+    font-weight: bold;
+    color : #fff;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.loginBx form {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginBx form input {
+    margin-top: 2rem;
+    height: 25px;
+    width: 300px;
+    border : none;
+    background-color: transparent;
+    border-bottom: 2px solid #fff;
+    outline : none;
+    color : #fff;
+    font-size: 1.2rem;
+    padding-bottom: 2px;
+}
+
+.loginBx form input::placeholder {
+    color : #fff;
+    font-size: 1.2rem;
+}
+
+.loginBx form button {
+    height: 50px;
+    width: 300px;
+    margin-top: 5rem;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(125,200,175,.5);
+    outline: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    border-color: rgba(255,255,255,.2);
+    color : #fff ;
+}

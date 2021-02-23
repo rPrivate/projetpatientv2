@@ -1,0 +1,71 @@
+Index: templates/default/index.html.twig
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{% extends 'base.html.twig' %}\r\n\r\n{% block title %}Hello DefaultController!{% endblock %}\r\n{% block stylesheets %}\r\n    <link rel=\"stylesheet\" href=\"css/index.css\">\r\n{% endblock %}\r\n{% block body %}\r\n    <div class=\"container\">\r\n        <section class=\"header\">\r\n            <h1>Bienvenue sur PPE Symfony</h1>\r\n        </section>\r\n        <section class=\"content\">\r\n            <div class=\"recherche\">\r\n                <form action=\"\" method=\"get\">\r\n                    <input type=\"text\" placeholder=\"Rechercher un patient, service...\">\r\n                    <button>Rechercher</button>\r\n                </form>\r\n            </div>\r\n            {% if is_granted('ROLE_SUPERADMIN') %}\r\n                <div class=\"actionService\">\r\n                    <a href=\"{{ path(\"superadmin\") }}\">Accéder au panel d'administration</a>\r\n                </div>\r\n            {% endif %}\r\n            <div class=\"listeChoix\">\r\n                <div class=\"choixServices\">\r\n                    <p>Liste des services :</p>\r\n                    <button><a href=\"{{ path(\"service\")}}\">Voir</a></button>\r\n                </div>\r\n                <div class=\"choixPatients\">\r\n                    <p>Liste des patients :</p>\r\n                    <button>Voir</button>\r\n                </div>\r\n                <div class=\"choixSejours\">\r\n                    <p>Liste des séjours :</p>\r\n                    <button>Voir</button>\r\n                </div>\r\n            </div>\r\n        </section>\r\n    </div>\r\n\r\n{% endblock %}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/default/index.html.twig	(revision 6a15f75bf610c38cc290568e6b12834eee23ed10)
++++ templates/default/index.html.twig	(date 1608142625941)
+@@ -3,6 +3,7 @@
+ {% block title %}Hello DefaultController!{% endblock %}
+ {% block stylesheets %}
+     <link rel="stylesheet" href="css/index.css">
++    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+ {% endblock %}
+ {% block body %}
+     <div class="container">
+@@ -10,12 +11,6 @@
+             <h1>Bienvenue sur PPE Symfony</h1>
+         </section>
+         <section class="content">
+-            <div class="recherche">
+-                <form action="" method="get">
+-                    <input type="text" placeholder="Rechercher un patient, service...">
+-                    <button>Rechercher</button>
+-                </form>
+-            </div>
+             {% if is_granted('ROLE_SUPERADMIN') %}
+                 <div class="actionService">
+                     <a href="{{ path("superadmin") }}">Accéder au panel d'administration</a>
+@@ -24,14 +19,18 @@
+             <div class="listeChoix">
+                 <div class="choixServices">
+                     <p>Liste des services :</p>
+-                    <button><a href="{{ path("service")}}">Voir</a></button>
++                    <a href="{{ path("service")}}">
++                    <i class="fas fa-stethoscope" style="font-size: 75px; color: black"></i>
++                    <button>Voir</a></button>
+                 </div>
+                 <div class="choixPatients">
+                     <p>Liste des patients :</p>
++                    <i class="fas fa-user-injured" style="font-size: 75px; color: black"></i>
+                     <button>Voir</button>
+                 </div>
+                 <div class="choixSejours">
+                     <p>Liste des séjours :</p>
++                    <i class="fas fa-procedures" style="font-size: 75px; color: black"></i>
+                     <button>Voir</button>
+                 </div>
+             </div>
+Index: templates/bed_list/index.html.twig
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{% extends 'base.html.twig' %}\r\n\r\n{% block title %}Hello BedListController!{% endblock %}\r\n{% block stylesheets %}\r\n    <link rel=\"stylesheet\" href=\"css/bedlist.css\">\r\n{% endblock %}\r\n{% block body %}\r\n    <div class=\"container\">\r\n        <section class=\"header\">\r\n            <h1>Liste des chambres de {{ service.libelle }}</h1>\r\n            {% if app.user %}\r\n                <div class=\"mb-3\">\r\n                    You are logged in as {{ app.user.username }}, <a href=\"{{ path('app_logout') }}\">Logout</a>\r\n                </div>\r\n            {% endif %}\r\n        </section>\r\n        <section class=\"content\">\r\n            <div class=\"actionChambre\">\r\n                {% if is_granted('ROLE_ADMIN') %}\r\n                    <a href=\"{{ path(\"bedAdd\", {id: id}) }}\">Ajouter une chambre</a>\r\n                {% endif %}\r\n            </div>\r\n            <div class=\"listeChambres\">\r\n                {% for chambre in chambres %}\r\n                <div class=\"choixChambre\">\r\n                    <p>Chambre : {{ chambre.NumChambre }} </p>\r\n                    <div class=\"buttons\">\r\n                        <button><a href=\"{{ path(\"bedVoir\", {id : chambre.id})}}\">Voir</a></button>\r\n                        {% if is_granted('ROLE_ADMIN') %}\r\n                            <button><a href=\"{{ path(\"bedDel\", {id: chambre.id})}}\">Supprimer</a></button>\r\n                        {% endif %}\r\n\r\n                    </div>\r\n                </div>\r\n                {% endfor %}\r\n\r\n            </div>\r\n        </section>\r\n    </div>\r\n\r\n{% endblock %}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/bed_list/index.html.twig	(revision 6a15f75bf610c38cc290568e6b12834eee23ed10)
++++ templates/bed_list/index.html.twig	(date 1608143732870)
+@@ -8,11 +8,6 @@
+     <div class="container">
+         <section class="header">
+             <h1>Liste des chambres de {{ service.libelle }}</h1>
+-            {% if app.user %}
+-                <div class="mb-3">
+-                    You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+-                </div>
+-            {% endif %}
+         </section>
+         <section class="content">
+             <div class="actionChambre">

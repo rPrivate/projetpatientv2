@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ServiceController!{% endblock %}
+{% block stylesheets %}
+
+    <link href="{{ asset('css/service.css') }}" rel="stylesheet"/>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <section class="header">
+            <h1>Liste des services</h1>
+        </section>
+        <section class="content">
+            {% if is_granted('ROLE_ADMIN') %}
+                <div class="actionService">
+                    <a href="{{ path("serviceAdd") }}">Ajouter un service</a>
+                </div>
+            {% endif %}
+            <div class="listeServices">
+                {% for service in services %}
+                <div class="choixServices">
+                    <p>{{ service.libelle}} :</p>
+                    <button><a href="{{ path("bed_list", {id: service.id})}}">Voir</a></button>
+                </div>
+                {% endfor %}
+
+            </div>
+        </section>
+    </div>
+{% endblock %}

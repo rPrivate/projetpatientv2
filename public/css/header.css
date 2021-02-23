@@ -1,0 +1,24 @@
+*{
+    margin :0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Header */
+
+.header {
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #555;
+}
+
+.header h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #fff;
+}
