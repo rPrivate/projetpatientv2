@@ -26,6 +26,7 @@ return [
     'homepage' => [[], ['_controller' => 'App\\Controller\\HomepageController::index'], [], [['text', '/']], [], []],
     'rdv' => [[], ['_controller' => 'App\\Controller\\IndexRDVController::index'], [], [['text', '/rdv']], [], []],
     'medecin' => [[], ['_controller' => 'App\\Controller\\MedecinController::index'], [], [['text', '/medecin']], [], []],
+    'medecinadd' => [[], ['_controller' => 'App\\Controller\\MedecinController::medecinAdd'], [], [['text', '/medecinadd']], [], []],
     'rdvAdd' => [[], ['_controller' => 'App\\Controller\\MedecinController::rdvAdd'], [], [['text', '/rdvAdd']], [], []],
     'medecinliste' => [[], ['_controller' => 'App\\Controller\\MedecinListController::index'], [], [['text', '/medecinliste']], [], []],
     'medecinAdd' => [[], ['_controller' => 'App\\Controller\\MedecinListController::addMedecin'], [], [['text', '/medecinAdd']], [], []],

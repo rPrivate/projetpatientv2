@@ -162,6 +162,6 @@ class __TwigTemplate_34bce1d7bc0469f832d05a8f1eb815a93e0dd475a431495a9b9f3552ce1
         </section>
     </div>
 {% endblock %}
-", "bed_list/bedAdd.html.twig", "C:\\wamp64\\www\\patient_symfony\\templates\\bed_list\\bedAdd.html.twig");
+", "bed_list/bedAdd.html.twig", "D:\\Project\\projetpatientv2\\templates\\bed_list\\bedAdd.html.twig");
     }
 }

@@ -8,9 +8,13 @@
         <div class="card-body">
             <h5 class="card-title">Dr.{{ medecin.prenom }} {{ medecin.nom }}</h5>
             <p class="card-text">{{ medecin.specialite }}</p>
-            <a href="{{ path("medecin", {id : medecin.id})}}" class="btn btn-primary">Consulter les horaires</a>
+            <a href="{{ path("medecin", {id : medecin.id, action : "view"})}}" class="btn btn-primary">Consulter les horaires</a>
+            <a href="{{ path("medecin", {id : medecin.id, action : "del"})}}" class="btn btn-primary">Supprimer medecin</a>
         </div>
+
     </div>
     {% endfor %}
-
+    <button class="btn btn-primary" href="{{ path("medecinadd")}}">
+        Ajouter medecin
+    </button>
 {% endblock %}

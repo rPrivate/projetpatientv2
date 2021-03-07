@@ -165,6 +165,6 @@ class __TwigTemplate_95c60e2417598c76270acefd1e2d6ebbe9744228f9746adaec70ef39c46
         </section>
     </div>
 {% endblock %}
-", "service/serviceAdd.html.twig", "C:\\wamp64\\www\\patient_symfony\\templates\\service\\serviceAdd.html.twig");
+", "service/serviceAdd.html.twig", "D:\\Project\\projetpatientv2\\templates\\service\\serviceAdd.html.twig");
     }
 }

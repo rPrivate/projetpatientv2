@@ -43,6 +43,7 @@ security:
         - { path: ^/bedDel, roles: ROLE_ADMIN }
         - { path: ^/bedMod, roles: ROLE_ADMIN }
         - { path: ^/serviceAdd, roles: ROLE_ADMIN }
+        - { path: ^/medecinadd, roles: ROLE_SECRETAIRE }
         - { path: ^/index, roles: ROLE_INFIRMIERE }
         - { path: ^/bedList, roles: ROLE_INFIRMIERE }
         - { path: ^/service, roles: ROLE_INFIRMIERE }

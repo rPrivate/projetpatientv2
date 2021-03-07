@@ -1671,6 +1671,6 @@ class __TwigTemplate_93e6040d1e090b838bee6ba0336e8b3ef9868c09ab5319bbc497f9ce65e
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "C:\\wamp64\\www\\patient_symfony\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "D:\\Project\\projetpatientv2\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\db.html.twig");
     }
 }

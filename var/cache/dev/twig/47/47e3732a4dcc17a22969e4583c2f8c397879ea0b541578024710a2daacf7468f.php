@@ -104,17 +104,26 @@ class __TwigTemplate_50f12b06070be70a2c139abda5d3c961963214281cbc17065575c5c070e
             echo "</p>
             <a href=\"";
             // line 11
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("medecin", ["id" => twig_get_attribute($this->env, $this->source, $context["medecin"], "id", [], "any", false, false, false, 11)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("medecin", ["id" => twig_get_attribute($this->env, $this->source, $context["medecin"], "id", [], "any", false, false, false, 11), "action" => "view"]), "html", null, true);
             echo "\" class=\"btn btn-primary\">Consulter les horaires</a>
+            <a href=\"";
+            // line 12
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("medecin", ["id" => twig_get_attribute($this->env, $this->source, $context["medecin"], "id", [], "any", false, false, false, 12), "action" => "del"]), "html", null, true);
+            echo "\" class=\"btn btn-primary\">Supprimer medecin</a>
         </div>
+
     </div>
     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['medecin'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 15
-        echo "
+        // line 17
+        echo "    <button class=\"btn btn-primary\" href=\"";
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("medecinadd");
+        echo "\">
+        Ajouter medecin
+    </button>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -136,7 +145,7 @@ class __TwigTemplate_50f12b06070be70a2c139abda5d3c961963214281cbc17065575c5c070e
 
     public function getDebugInfo()
     {
-        return array (  117 => 15,  107 => 11,  103 => 10,  97 => 9,  93 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  122 => 17,  111 => 12,  107 => 11,  103 => 10,  97 => 9,  93 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -151,12 +160,16 @@ class __TwigTemplate_50f12b06070be70a2c139abda5d3c961963214281cbc17065575c5c070e
         <div class=\"card-body\">
             <h5 class=\"card-title\">Dr.{{ medecin.prenom }} {{ medecin.nom }}</h5>
             <p class=\"card-text\">{{ medecin.specialite }}</p>
-            <a href=\"{{ path(\"medecin\", {id : medecin.id})}}\" class=\"btn btn-primary\">Consulter les horaires</a>
+            <a href=\"{{ path(\"medecin\", {id : medecin.id, action : \"view\"})}}\" class=\"btn btn-primary\">Consulter les horaires</a>
+            <a href=\"{{ path(\"medecin\", {id : medecin.id, action : \"del\"})}}\" class=\"btn btn-primary\">Supprimer medecin</a>
         </div>
+
     </div>
     {% endfor %}
-
+    <button class=\"btn btn-primary\" href=\"{{ path(\"medecinadd\")}}\">
+        Ajouter medecin
+    </button>
 {% endblock %}
-", "medecin_list/index.html.twig", "C:\\wamp64\\www\\patient_symfony\\templates\\medecin_list\\index.html.twig");
+", "medecin_list/index.html.twig", "D:\\Project\\projetpatientv2\\templates\\medecin_list\\index.html.twig");
     }
 }

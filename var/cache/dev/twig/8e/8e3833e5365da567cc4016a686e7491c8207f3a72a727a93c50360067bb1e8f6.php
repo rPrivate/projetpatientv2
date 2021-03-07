@@ -164,6 +164,6 @@ class __TwigTemplate_38dc34fd6171e9300b525b6d3ea84a2d62892bd4ecfd6cfa2aebbb0d82c
     </div>
 
 {% endblock %}
-", "patient/add.html.twig", "C:\\wamp64\\www\\patient_symfony\\templates\\patient\\add.html.twig");
+", "patient/add.html.twig", "D:\\Project\\projetpatientv2\\templates\\patient\\add.html.twig");
     }
 }

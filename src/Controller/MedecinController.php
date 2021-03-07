@@ -2,9 +2,12 @@
 
 namespace App\Controller;
 
+use App\Entity\Medecin;
 use App\Entity\RendezVous;
+use App\Form\MedecinAddType;
 use App\Repository\MedecinRepository;
 use App\Repository\RendezVousRepository;
+use Doctrine\ORM\EntityManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
@@ -35,13 +38,71 @@ class MedecinController extends AbstractController
 
     public function index(MedecinRepository $repository): Response
     {
-        $id = $_GET["id"];
-        $medecin = $repository->find($id);
-        return $this->render('medecin/index.html.twig', [
-            'controller_name' => 'MedecinController',
-            'medecin' => $medecin,
-            'id' => $id
-        ]);
+        if (isset($_GET["action"])) {
+
+            $type = $_GET["action"];
+
+            switch ($type) {
+                case "view":
+                    $id = $_GET["id"];
+                    $medecin = $repository->find($id);
+                    return $this->render('medecin/index.html.twig', [
+                        'controller_name' => 'MedecinController',
+                        'medecin' => $medecin,
+                        'id' => $id
+                    ]);
+                case "del":
+                    $id = $_GET["id"];
+                    // get EntityManager
+                    $em = $this->getDoctrine()->getManager();
+
+// Get a reference to the entity ( will not generate a query )
+                    $medecin = $em->getRepository(Medecin::class)->find($id);
+                    $em->remove($medecin);
+                    $em->flush();
+
+                    return $this->redirectToRoute('medecinliste');
+
+
+            }
+        }
+        else {
+            $id = $_GET["id"];
+            $medecin = $repository->find($id);
+            return $this->render('medecin/index.html.twig', [
+                'controller_name' => 'MedecinController',
+                'medecin' => $medecin,
+                'id' => $id
+            ]);
+        }
+
+    }
+
+    /**
+     * @param MedecinRepository $repository
+     * @param Security $security
+     * @return Response
+     * @Route("/medecinadd", name="medecinadd")
+     */
+
+    public function medecinAdd(MedecinRepository $repository,Request $request): Response
+    {
+        $medecin = new Medecin();
+        $form = $this->createForm(MedecinAddType::class, $medecin);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $form->getData();
+
+            $medecin = $form->getData();
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($medecin);
+            $entityManager->flush();
+
+
+
+        }
+        return $this->render('medecin/medecinadd.html.twig', [
+            'form' => $form->createView()]);
     }
 
     /**

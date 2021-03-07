@@ -23,6 +23,7 @@ return [
         '/' => [[['_route' => 'homepage', '_controller' => 'App\\Controller\\HomepageController::index'], null, null, null, false, false, null]],
         '/rdv' => [[['_route' => 'rdv', '_controller' => 'App\\Controller\\IndexRDVController::index'], null, null, null, false, false, null]],
         '/medecin' => [[['_route' => 'medecin', '_controller' => 'App\\Controller\\MedecinController::index'], null, null, null, false, false, null]],
+        '/medecinadd' => [[['_route' => 'medecinadd', '_controller' => 'App\\Controller\\MedecinController::medecinAdd'], null, null, null, false, false, null]],
         '/rdvAdd' => [[['_route' => 'rdvAdd', '_controller' => 'App\\Controller\\MedecinController::rdvAdd'], null, null, null, false, false, null]],
         '/medecinliste' => [[['_route' => 'medecinliste', '_controller' => 'App\\Controller\\MedecinListController::index'], null, null, null, false, false, null]],
         '/medecinAdd' => [[['_route' => 'medecinAdd', '_controller' => 'App\\Controller\\MedecinListController::addMedecin'], null, null, null, false, false, null]],

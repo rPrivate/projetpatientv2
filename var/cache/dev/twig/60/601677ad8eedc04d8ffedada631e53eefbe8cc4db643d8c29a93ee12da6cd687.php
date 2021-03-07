@@ -238,6 +238,6 @@ class __TwigTemplate_f2d6cd6aff04a640217fe64752554ec00c1dc581f8da8967efc52f184de
         </section>
     </div>
 
-{% endblock %}", "admin/index.html.twig", "C:\\wamp64\\www\\patient_symfony\\templates\\admin\\index.html.twig");
+{% endblock %}", "admin/index.html.twig", "D:\\Project\\projetpatientv2\\templates\\admin\\index.html.twig");
     }
 }

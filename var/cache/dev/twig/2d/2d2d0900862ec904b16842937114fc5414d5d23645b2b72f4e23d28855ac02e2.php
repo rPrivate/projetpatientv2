@@ -148,6 +148,6 @@ class __TwigTemplate_e0e49c876b2bac4485264ec438ef1107902ba66d63bc92370afba7958c4
 {% block body %}
     <h1>Yo</h1>
 {% endblock %}
-", "bed_list/bedDel.html.twig", "C:\\wamp64\\www\\patient_symfony\\templates\\bed_list\\bedDel.html.twig");
+", "bed_list/bedDel.html.twig", "D:\\Project\\projetpatientv2\\templates\\bed_list\\bedDel.html.twig");
     }
 }
