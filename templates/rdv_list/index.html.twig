@@ -14,6 +14,9 @@
                 {% endif %}
                 <p class="card-text">{{ rdv.medecin.specialite }}</p>
                 <h3>{{ rdv.etat }}</h3>
+                {% if is_granted('ROLE_PATIENT') and rdv.etat == 'En attente' %}
+                    <button type="button" class="btn btn-danger"><a href="{{ path("remove", {id: rdv.id}) }}">Annuler</a></button>
+                {% endif %}
                 {% if is_granted('ROLE_SECRETAIRE') %}
                     <button type="button" class="btn btn-success"><a href="{{ path("accept", {id: rdv.id}) }}">Accepter</a></button>
                     <button type="button" class="btn btn-danger"><a href="{{ path("decline", {id: rdv.id}) }}">Refuser</a></button>

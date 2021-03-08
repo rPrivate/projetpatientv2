@@ -123,18 +123,27 @@ class __TwigTemplate_740c298e38e64e5ed83345ad0f6956f9212ee0a7dff7fc530570eb2e75d
             echo "</h3>
                 ";
             // line 17
-            if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_SECRETAIRE")) {
+            if (($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_PATIENT") && (0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["rdv"], "etat", [], "any", false, false, false, 17), "En attente")))) {
                 // line 18
+                echo "                    <button type=\"button\" class=\"btn btn-danger\"><a href=\"";
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("remove", ["id" => twig_get_attribute($this->env, $this->source, $context["rdv"], "id", [], "any", false, false, false, 18)]), "html", null, true);
+                echo "\">Annuler</a></button>
+                ";
+            }
+            // line 20
+            echo "                ";
+            if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_SECRETAIRE")) {
+                // line 21
                 echo "                    <button type=\"button\" class=\"btn btn-success\"><a href=\"";
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accept", ["id" => twig_get_attribute($this->env, $this->source, $context["rdv"], "id", [], "any", false, false, false, 18)]), "html", null, true);
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accept", ["id" => twig_get_attribute($this->env, $this->source, $context["rdv"], "id", [], "any", false, false, false, 21)]), "html", null, true);
                 echo "\">Accepter</a></button>
                     <button type=\"button\" class=\"btn btn-danger\"><a href=\"";
-                // line 19
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("decline", ["id" => twig_get_attribute($this->env, $this->source, $context["rdv"], "id", [], "any", false, false, false, 19)]), "html", null, true);
+                // line 22
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("decline", ["id" => twig_get_attribute($this->env, $this->source, $context["rdv"], "id", [], "any", false, false, false, 22)]), "html", null, true);
                 echo "\">Refuser</a></button>
                 ";
             }
-            // line 21
+            // line 24
             echo "
             </div>
         </div>
@@ -163,7 +172,7 @@ class __TwigTemplate_740c298e38e64e5ed83345ad0f6956f9212ee0a7dff7fc530570eb2e75d
 
     public function getDebugInfo()
     {
-        return array (  138 => 21,  133 => 19,  128 => 18,  126 => 17,  122 => 16,  117 => 15,  111 => 13,  109 => 12,  103 => 11,  99 => 10,  95 => 8,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  147 => 24,  142 => 22,  137 => 21,  134 => 20,  128 => 18,  126 => 17,  122 => 16,  117 => 15,  111 => 13,  109 => 12,  103 => 11,  99 => 10,  95 => 8,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -184,6 +193,9 @@ class __TwigTemplate_740c298e38e64e5ed83345ad0f6956f9212ee0a7dff7fc530570eb2e75d
                 {% endif %}
                 <p class=\"card-text\">{{ rdv.medecin.specialite }}</p>
                 <h3>{{ rdv.etat }}</h3>
+                {% if is_granted('ROLE_PATIENT') and rdv.etat == 'En attente' %}
+                    <button type=\"button\" class=\"btn btn-danger\"><a href=\"{{ path(\"remove\", {id: rdv.id}) }}\">Annuler</a></button>
+                {% endif %}
                 {% if is_granted('ROLE_SECRETAIRE') %}
                     <button type=\"button\" class=\"btn btn-success\"><a href=\"{{ path(\"accept\", {id: rdv.id}) }}\">Accepter</a></button>
                     <button type=\"button\" class=\"btn btn-danger\"><a href=\"{{ path(\"decline\", {id: rdv.id}) }}\">Refuser</a></button>

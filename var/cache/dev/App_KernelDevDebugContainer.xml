@@ -5809,7 +5809,7 @@
         <argument key="repository" type="service" id="App\Repository\ServiceRepository"/>
       </argument>
     </service>
-    <service id=".service_locator._CKrfCb" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.eWsJ_1V" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AdminController::del" type="service" id=".service_locator.QOjUGpS"/>
@@ -5826,8 +5826,11 @@
         <argument key="App\Controller\RDVListController::accept" type="service" id=".service_locator.uRN7hil"/>
         <argument key="App\Controller\RDVListController::decline" type="service" id=".service_locator.uRN7hil"/>
         <argument key="App\Controller\RDVListController::index" type="service" id=".service_locator.uRN7hil"/>
+        <argument key="App\Controller\RDVListController::remove" type="service" id=".service_locator.uRN7hil"/>
+        <argument key="App\Controller\RDVListController::showAccept" type="service" id=".service_locator.uRN7hil"/>
         <argument key="App\Controller\RDVListController::showAll" type="service" id=".service_locator.uRN7hil"/>
         <argument key="App\Controller\RDVListController::showWait" type="service" id=".service_locator.uRN7hil"/>
+        <argument key="App\Controller\RDVListController::showWaitPatient" type="service" id=".service_locator.uRN7hil"/>
         <argument key="App\Controller\RegistrationController::registerAdmin" type="service" id=".service_locator.W.VyWpL"/>
         <argument key="App\Controller\RegistrationController::registerInfirmiere" type="service" id=".service_locator.W.VyWpL"/>
         <argument key="App\Controller\RegistrationController::registerPatient" type="service" id=".service_locator.W.VyWpL"/>
@@ -5854,8 +5857,11 @@
         <argument key="App\Controller\RDVListController:accept" type="service" id=".service_locator.uRN7hil"/>
         <argument key="App\Controller\RDVListController:decline" type="service" id=".service_locator.uRN7hil"/>
         <argument key="App\Controller\RDVListController:index" type="service" id=".service_locator.uRN7hil"/>
+        <argument key="App\Controller\RDVListController:remove" type="service" id=".service_locator.uRN7hil"/>
+        <argument key="App\Controller\RDVListController:showAccept" type="service" id=".service_locator.uRN7hil"/>
         <argument key="App\Controller\RDVListController:showAll" type="service" id=".service_locator.uRN7hil"/>
         <argument key="App\Controller\RDVListController:showWait" type="service" id=".service_locator.uRN7hil"/>
+        <argument key="App\Controller\RDVListController:showWaitPatient" type="service" id=".service_locator.uRN7hil"/>
         <argument key="App\Controller\RegistrationController:registerAdmin" type="service" id=".service_locator.W.VyWpL"/>
         <argument key="App\Controller\RegistrationController:registerInfirmiere" type="service" id=".service_locator.W.VyWpL"/>
         <argument key="App\Controller\RegistrationController:registerPatient" type="service" id=".service_locator.W.VyWpL"/>
@@ -6408,12 +6414,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator._CKrfCb"/>
+      <argument type="service" id=".service_locator.eWsJ_1V"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator._CKrfCb"/>
+      <argument type="service" id=".service_locator.eWsJ_1V"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection"/>
@@ -6822,7 +6828,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.Kbr2i2X" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator._CKrfCb"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.eWsJ_1V"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

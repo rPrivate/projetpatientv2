@@ -39,6 +39,19 @@ class RDVListController extends AbstractController
     }
 
     /**
+     * @Route("/rdvlistWaitPatient", name="rdv_listWaitPatient")
+     */
+    public function showWaitPatient(RendezVousRepository $repository): Response
+    {
+        $user = $this->security->getUser();
+        $rdvs = $this->repository->findBy(['Patient' => $user, 'Etat' => 'En attente']);
+        return $this->render('rdv_list/index.html.twig', [
+            'controller_name' => 'RDVListController',
+            'rdvs' =>$rdvs
+        ]);
+    }
+
+    /**
      * @Route("/rdvlistWait", name="rdv_listWait")
      */
     public function showWait(RendezVousRepository $repository): Response
@@ -46,6 +59,19 @@ class RDVListController extends AbstractController
         return $this->render('rdv_list/index.html.twig', [
             'controller_name' => 'RDVListController',
             'rdvs' =>$repository->findBy(['Etat' => 'En attente'])
+        ]);
+    }
+
+    /**
+     * @Route("/rdvlistAccept", name="rdv_listAccept")
+     */
+    public function showAccept(RendezVousRepository $repository): Response
+    {
+        $user = $this->security->getUser();
+        $rdvs = $this->repository->findBy(['Patient' => $user, 'Etat' => 'Accepté']);
+        return $this->render('rdv_list/index.html.twig', [
+            'controller_name' => 'RDVListController',
+            'rdvs' =>$rdvs
         ]);
     }
 
@@ -82,6 +108,20 @@ class RDVListController extends AbstractController
         $id = $_GET["id"];
         $rdv = $repository->find($id);
         $rdv->setEtat("Refusé");
+        $em = $this->getDoctrine()->getManager();
+        $em->flush();
+        return $this->redirectToRoute('rdv_listAll');
+
+    }
+
+    /**
+     * @Route("/remove", name="remove")
+     */
+    public function remove(RendezVousRepository $repository): Response
+    {
+        $id = $_GET["id"];
+        $rdv = $repository->find($id);
+        $rdv->setEtat("Annulé");
         $em = $this->getDoctrine()->getManager();
         $em->flush();
         return $this->redirectToRoute('rdv_listAll');
