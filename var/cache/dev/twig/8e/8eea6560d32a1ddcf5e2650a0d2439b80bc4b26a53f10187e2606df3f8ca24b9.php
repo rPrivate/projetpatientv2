@@ -62,13 +62,16 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
 
     </head>
     <body>
-        ";
+       ";
         // line 14
-        $this->displayBlock('body', $context, $blocks);
+        $this->loadTemplate("navbar.html.twig", "base.html.twig", 14)->display($context);
         // line 15
         echo "        ";
-        $this->displayBlock('javascripts', $context, $blocks);
+        $this->displayBlock('body', $context, $blocks);
         // line 16
+        echo "        ";
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 17
         echo "    </body>
 </html>
 ";
@@ -112,7 +115,7 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
         // line 7
         echo "            <link href=\"https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700;900&display=swap\" rel=\"stylesheet\">
             <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1\" crossorigin=\"anonymous\">
-        ";
+            ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -121,7 +124,7 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
 
     }
 
-    // line 14
+    // line 15
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -139,7 +142,7 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
 
     }
 
-    // line 15
+    // line 16
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -169,7 +172,7 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
 
     public function getDebugInfo()
     {
-        return array (  143 => 15,  125 => 14,  113 => 7,  103 => 6,  84 => 5,  72 => 16,  69 => 15,  67 => 14,  59 => 10,  57 => 6,  53 => 5,  47 => 1,);
+        return array (  146 => 16,  128 => 15,  116 => 7,  106 => 6,  87 => 5,  75 => 17,  72 => 16,  69 => 15,  67 => 14,  59 => 10,  57 => 6,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -182,15 +185,16 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
         {% block stylesheets %}
             <link href=\"https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700;900&display=swap\" rel=\"stylesheet\">
             <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1\" crossorigin=\"anonymous\">
-        {% endblock %}
+            {% endblock %}
         <link href=\"{{ asset('css/header.css') }}\" rel=\"stylesheet\"/>
 
     </head>
     <body>
+       {% include 'navbar.html.twig' %}
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "C:\\wamp64\\www\\projetpatientv2\\templates\\base.html.twig");
+", "base.html.twig", "D:\\Project\\projetpatientv2\\templates\\base.html.twig");
     }
 }
