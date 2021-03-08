@@ -2,6 +2,7 @@
 
 
 {% block body %}
+    {% include 'navbar.html.twig' %}
     {% if is_granted('ROLE_PATIENT') and not is_granted('ROLE_SECRETAIRE') %}
         <button type="button" class="btn btn-secondary btn-lg"><a style="color: white" href="{{ path("medecinliste") }}">Prendre Rendez-vous</a></button>
         <button type="button" class="btn btn-secondary btn-lg"><a style="color: white" href="{{ path("rdv_listWaitPatient") }}">Voir les rendez-vous en attente</a></button>

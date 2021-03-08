@@ -6,6 +6,7 @@
     <link href="{{ asset('css/bedList.css') }}" rel="stylesheet"/>
 {% endblock %}
 {% block body %}
+    {% include 'navbar.html.twig' %}
     <div class="container">
         <section class="header">
             <h1>Liste des chambres de {{ service.libelle }}</h1>

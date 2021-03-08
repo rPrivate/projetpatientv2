@@ -62,16 +62,13 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
 
     </head>
     <body>
-       ";
+        ";
         // line 14
-        $this->loadTemplate("navbar.html.twig", "base.html.twig", 14)->display($context);
+        $this->displayBlock('body', $context, $blocks);
         // line 15
         echo "        ";
-        $this->displayBlock('body', $context, $blocks);
-        // line 16
-        echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 17
+        // line 16
         echo "    </body>
 </html>
 ";
@@ -124,7 +121,7 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
 
     }
 
-    // line 15
+    // line 14
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -142,7 +139,7 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
 
     }
 
-    // line 16
+    // line 15
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -172,7 +169,7 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
 
     public function getDebugInfo()
     {
-        return array (  146 => 16,  128 => 15,  116 => 7,  106 => 6,  87 => 5,  75 => 17,  72 => 16,  69 => 15,  67 => 14,  59 => 10,  57 => 6,  53 => 5,  47 => 1,);
+        return array (  143 => 15,  125 => 14,  113 => 7,  103 => 6,  84 => 5,  72 => 16,  69 => 15,  67 => 14,  59 => 10,  57 => 6,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -190,11 +187,10 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
 
     </head>
     <body>
-       {% include 'navbar.html.twig' %}
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "D:\\Project\\projetpatientv2\\templates\\base.html.twig");
+", "base.html.twig", "C:\\wamp64\\www\\projetpatientv2\\templates\\base.html.twig");
     }
 }

@@ -93,6 +93,6 @@ class __TwigTemplate_e3886f1de9a56c8645bfb39f0d2800a65dacfae56079bcf8cba0caffe4f
 
 {% block body %}{% endblock %}
 
-", "homepage/index.html.twig", "D:\\Project\\projetpatientv2\\templates\\homepage\\index.html.twig");
+", "homepage/index.html.twig", "C:\\wamp64\\www\\projetpatientv2\\templates\\homepage\\index.html.twig");
     }
 }
