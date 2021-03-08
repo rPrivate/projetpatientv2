@@ -235,6 +235,6 @@ class __TwigTemplate_194a700fec2b680a5aa7073d91e77669b793bd1f91ee5e16dcc811f157b
     </div>
 
 {% endblock %}
-", "bed_list/index.html.twig", "D:\\Project\\projetpatientv2\\templates\\bed_list\\index.html.twig");
+", "bed_list/index.html.twig", "C:\\wamp64\\www\\projetpatientv2\\templates\\bed_list\\index.html.twig");
     }
 }

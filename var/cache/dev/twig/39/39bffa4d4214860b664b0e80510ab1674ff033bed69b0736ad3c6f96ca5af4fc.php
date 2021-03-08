@@ -180,6 +180,6 @@ class __TwigTemplate_f1249f0916265e81f6d68f6d5c15c4e26346bd4804021af261201f905ef
         <button type=\"submit\" class=\"btn\">Register</button>
     {{ form_end(registrationForm) }}
 {% endblock %}
-", "registration/register.html.twig", "D:\\Project\\projetpatientv2\\templates\\registration\\register.html.twig");
+", "registration/register.html.twig", "C:\\wamp64\\www\\projetpatientv2\\templates\\registration\\register.html.twig");
     }
 }

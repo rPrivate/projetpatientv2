@@ -164,6 +164,6 @@ class __TwigTemplate_e41347fcc2515d6d75b343254936c6554512db098fae0d104bb507079fa
             {{ form(form) }}
         </section>
     </div>
-{% endblock %}", "bed_list/bedMod.html.twig", "D:\\Project\\projetpatientv2\\templates\\bed_list\\bedMod.html.twig");
+{% endblock %}", "bed_list/bedMod.html.twig", "C:\\wamp64\\www\\projetpatientv2\\templates\\bed_list\\bedMod.html.twig");
     }
 }

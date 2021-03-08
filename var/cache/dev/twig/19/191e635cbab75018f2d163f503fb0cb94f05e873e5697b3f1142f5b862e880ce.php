@@ -212,6 +212,6 @@ class __TwigTemplate_c0a2861fd2369ecdb0ad1a0e07d2c613b37cf296aeff3e039ab60ec982d
         </section>
     </div>
 {% endblock %}
-", "service/index.html.twig", "D:\\Project\\projetpatientv2\\templates\\service\\index.html.twig");
+", "service/index.html.twig", "C:\\wamp64\\www\\projetpatientv2\\templates\\service\\index.html.twig");
     }
 }

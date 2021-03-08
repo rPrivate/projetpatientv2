@@ -39,11 +39,22 @@ class RDVListController extends AbstractController
     }
 
     /**
+     * @Route("/rdvlistWait", name="rdv_listWait")
+     */
+    public function showWait(RendezVousRepository $repository): Response
+    {
+        return $this->render('rdv_list/index.html.twig', [
+            'controller_name' => 'RDVListController',
+            'rdvs' =>$repository->findBy(['Etat' => 'En attente'])
+        ]);
+    }
+
+    /**
      * @Route("/rdvlistAll", name="rdv_listAll")
      */
     public function showAll(RendezVousRepository $repository): Response
     {
-        return $this->render('rdv_list/index.html.twig', [
+        return $this->render('rdv_list/indexAll.html.twig', [
             'controller_name' => 'RDVListController',
             'rdvs' =>$repository->findAll()
         ]);

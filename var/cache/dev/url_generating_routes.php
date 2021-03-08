@@ -34,6 +34,7 @@ return [
     'patientadd' => [[], ['_controller' => 'App\\Controller\\PatientController::addPatient'], [], [['text', '/patient/add']], [], []],
     'patientmod' => [['id'], ['_controller' => 'App\\Controller\\PatientController::modPatient'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/patient/mod']], [], []],
     'rdv_list' => [[], ['_controller' => 'App\\Controller\\RDVListController::index'], [], [['text', '/rdvlist']], [], []],
+    'rdv_listWait' => [[], ['_controller' => 'App\\Controller\\RDVListController::showWait'], [], [['text', '/rdvlistWait']], [], []],
     'rdv_listAll' => [[], ['_controller' => 'App\\Controller\\RDVListController::showAll'], [], [['text', '/rdvlistAll']], [], []],
     'accept' => [[], ['_controller' => 'App\\Controller\\RDVListController::accept'], [], [['text', '/accept']], [], []],
     'decline' => [[], ['_controller' => 'App\\Controller\\RDVListController::decline'], [], [['text', '/decline']], [], []],

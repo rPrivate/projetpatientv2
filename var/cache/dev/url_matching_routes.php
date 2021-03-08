@@ -30,6 +30,7 @@ return [
         '/patient' => [[['_route' => 'patient', '_controller' => 'App\\Controller\\PatientController::index'], null, null, null, false, false, null]],
         '/patient/add' => [[['_route' => 'patientadd', '_controller' => 'App\\Controller\\PatientController::addPatient'], null, null, null, false, false, null]],
         '/rdvlist' => [[['_route' => 'rdv_list', '_controller' => 'App\\Controller\\RDVListController::index'], null, null, null, false, false, null]],
+        '/rdvlistWait' => [[['_route' => 'rdv_listWait', '_controller' => 'App\\Controller\\RDVListController::showWait'], null, null, null, false, false, null]],
         '/rdvlistAll' => [[['_route' => 'rdv_listAll', '_controller' => 'App\\Controller\\RDVListController::showAll'], null, null, null, false, false, null]],
         '/accept' => [[['_route' => 'accept', '_controller' => 'App\\Controller\\RDVListController::accept'], null, null, null, false, false, null]],
         '/decline' => [[['_route' => 'decline', '_controller' => 'App\\Controller\\RDVListController::decline'], null, null, null, false, false, null]],

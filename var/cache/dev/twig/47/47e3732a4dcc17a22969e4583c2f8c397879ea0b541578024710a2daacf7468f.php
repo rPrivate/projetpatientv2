@@ -170,6 +170,6 @@ class __TwigTemplate_50f12b06070be70a2c139abda5d3c961963214281cbc17065575c5c070e
         Ajouter medecin
     </button>
 {% endblock %}
-", "medecin_list/index.html.twig", "D:\\Project\\projetpatientv2\\templates\\medecin_list\\index.html.twig");
+", "medecin_list/index.html.twig", "C:\\wamp64\\www\\projetpatientv2\\templates\\medecin_list\\index.html.twig");
     }
 }

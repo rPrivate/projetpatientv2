@@ -130,6 +130,6 @@ class __TwigTemplate_5ed59f96910dd7586dea067e7919b34eee1654d3042a34e11352fbf60d4
     <h3 style=\"text-align: center\"> Disponibilité</h3>
     <button type=\"button\" class=\"btn btn-secondary btn-lg\"><a href=\"{{ path(\"rdvAdd\", {id: medecin.id}) }}\">Ajouter Rendez-vous</a></button>
 {% endblock %}
-", "medecin/index.html.twig", "D:\\Project\\projetpatientv2\\templates\\medecin\\index.html.twig");
+", "medecin/index.html.twig", "C:\\wamp64\\www\\projetpatientv2\\templates\\medecin\\index.html.twig");
     }
 }

@@ -157,6 +157,6 @@ class __TwigTemplate_9924f2d4cfe283b9121dfc0b5a03e16f5b2f990dd2b54284d073c5c49e6
         </section>
 
     </div>
-{% endblock %}", "admin/adminMod.html.twig", "D:\\Project\\projetpatientv2\\templates\\admin\\adminMod.html.twig");
+{% endblock %}", "admin/adminMod.html.twig", "C:\\wamp64\\www\\projetpatientv2\\templates\\admin\\adminMod.html.twig");
     }
 }

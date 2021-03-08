@@ -206,6 +206,6 @@ class __TwigTemplate_988e3d32f3fa361ffebbec8512541576991fc242b8b21b0b4435d929756
     </div>
 
 {% endblock %}
-", "bed_list/bedVoir.html.twig", "D:\\Project\\projetpatientv2\\templates\\bed_list\\bedVoir.html.twig");
+", "bed_list/bedVoir.html.twig", "C:\\wamp64\\www\\projetpatientv2\\templates\\bed_list\\bedVoir.html.twig");
     }
 }
