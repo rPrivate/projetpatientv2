@@ -106,11 +106,17 @@ class __TwigTemplate_50f12b06070be70a2c139abda5d3c961963214281cbc17065575c5c070e
             // line 11
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("medecin", ["id" => twig_get_attribute($this->env, $this->source, $context["medecin"], "id", [], "any", false, false, false, 11), "action" => "view"]), "html", null, true);
             echo "\" class=\"btn btn-primary\">Consulter les horaires</a>
-            <a href=\"";
+            ";
             // line 12
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("medecin", ["id" => twig_get_attribute($this->env, $this->source, $context["medecin"], "id", [], "any", false, false, false, 12), "action" => "del"]), "html", null, true);
-            echo "\" class=\"btn btn-primary\">Supprimer medecin</a>
-        </div>
+            if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_SECRETAIRE")) {
+                // line 13
+                echo "                <a href=\"";
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("medecin", ["id" => twig_get_attribute($this->env, $this->source, $context["medecin"], "id", [], "any", false, false, false, 13), "action" => "del"]), "html", null, true);
+                echo "\" class=\"btn btn-primary\">Supprimer medecin</a>
+            ";
+            }
+            // line 15
+            echo "        </div>
 
     </div>
     ";
@@ -118,10 +124,10 @@ class __TwigTemplate_50f12b06070be70a2c139abda5d3c961963214281cbc17065575c5c070e
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['medecin'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 17
+        // line 19
         echo "    ";
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_SECRETAIRE")) {
-            // line 18
+            // line 20
             echo "    <a class=\"btn btn-primary\" href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("medecinadd");
             echo "\">
@@ -149,7 +155,7 @@ class __TwigTemplate_50f12b06070be70a2c139abda5d3c961963214281cbc17065575c5c070e
 
     public function getDebugInfo()
     {
-        return array (  125 => 18,  122 => 17,  111 => 12,  107 => 11,  103 => 10,  97 => 9,  93 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  131 => 20,  128 => 19,  119 => 15,  113 => 13,  111 => 12,  107 => 11,  103 => 10,  97 => 9,  93 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -165,7 +171,9 @@ class __TwigTemplate_50f12b06070be70a2c139abda5d3c961963214281cbc17065575c5c070e
             <h5 class=\"card-title\">Dr.{{ medecin.prenom }} {{ medecin.nom }}</h5>
             <p class=\"card-text\">{{ medecin.specialite }}</p>
             <a href=\"{{ path(\"medecin\", {id : medecin.id, action : \"view\"})}}\" class=\"btn btn-primary\">Consulter les horaires</a>
-            <a href=\"{{ path(\"medecin\", {id : medecin.id, action : \"del\"})}}\" class=\"btn btn-primary\">Supprimer medecin</a>
+            {% if is_granted('ROLE_SECRETAIRE')%}
+                <a href=\"{{ path(\"medecin\", {id : medecin.id, action : \"del\"})}}\" class=\"btn btn-primary\">Supprimer medecin</a>
+            {% endif %}
         </div>
 
     </div>

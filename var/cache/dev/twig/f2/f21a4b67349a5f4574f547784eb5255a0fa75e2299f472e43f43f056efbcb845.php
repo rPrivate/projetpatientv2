@@ -105,6 +105,12 @@ class __TwigTemplate_e3886f1de9a56c8645bfb39f0d2800a65dacfae56079bcf8cba0caffe4f
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
         echo "\">Espace Gestion</a>
                     </li>
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link active\" aria-current=\"page\" href=\"";
+        // line 21
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_registerPatient");
+        echo "\">Créer un compte utilisateur</a>
+                    </li>
 
                 </ul>
             </div>
@@ -131,7 +137,7 @@ class __TwigTemplate_e3886f1de9a56c8645bfb39f0d2800a65dacfae56079bcf8cba0caffe4f
 
     public function getDebugInfo()
     {
-        return array (  105 => 18,  99 => 15,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  111 => 21,  105 => 18,  99 => 15,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -154,6 +160,9 @@ class __TwigTemplate_e3886f1de9a56c8645bfb39f0d2800a65dacfae56079bcf8cba0caffe4f
                     </li>
                     <li class=\"nav-item\">
                         <a class=\"nav-link active\" aria-current=\"page\" href=\"{{ path(\"app_login\") }}\">Espace Gestion</a>
+                    </li>
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link active\" aria-current=\"page\" href=\"{{ path(\"app_registerPatient\") }}\">Créer un compte utilisateur</a>
                     </li>
 
                 </ul>

@@ -166,7 +166,9 @@ class __TwigTemplate_55ee5b5aefd18c108e82a5ae93a5e37bbfc10954e5f4dc2d42df3fd61c4
                 <button class=\"btn btn-lg btn-primary\" type=\"submit\">
                     Se connecter
                 </button>
+
             </form>
+
         </div>
     </div>
 ";
@@ -246,7 +248,9 @@ class __TwigTemplate_55ee5b5aefd18c108e82a5ae93a5e37bbfc10954e5f4dc2d42df3fd61c4
                 <button class=\"btn btn-lg btn-primary\" type=\"submit\">
                     Se connecter
                 </button>
+
             </form>
+
         </div>
     </div>
 {% endblock %}

@@ -38,7 +38,9 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
         - { path: ^/superadmin, roles: ROLE_SUPER_ADMIN }
-        - { path: ^/register, roles: ROLE_SUPER_ADMIN }
+        - { path: ^/registerAdmin, roles: ROLE_SUPER_ADMIN }
+        - { path: ^/registerInfirmiere, roles: ROLE_SUPER_ADMIN }
+        - { path: ^/registerSecretaire, roles: ROLE_SUPER_ADMIN }
         - { path: ^/bedAdd, roles: ROLE_ADMIN }
         - { path: ^/bedDel, roles: ROLE_ADMIN }
         - { path: ^/bedMod, roles: ROLE_ADMIN }

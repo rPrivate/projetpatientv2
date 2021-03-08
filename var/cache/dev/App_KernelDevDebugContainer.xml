@@ -4152,7 +4152,21 @@
         <argument>null</argument>
       </call>
       <call method="add">
-        <argument type="service" id=".security.request_matcher.O7Tsk.w"/>
+        <argument type="service" id=".security.request_matcher.fY.Xgku"/>
+        <argument type="collection">
+          <argument>ROLE_SUPER_ADMIN</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.ewxpIXl"/>
+        <argument type="collection">
+          <argument>ROLE_SUPER_ADMIN</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.vxRYpdi"/>
         <argument type="collection">
           <argument>ROLE_SUPER_ADMIN</argument>
         </argument>
@@ -4673,8 +4687,14 @@
     <service id=".security.request_matcher.fxuSsMy" class="Symfony\Component\HttpFoundation\RequestMatcher">
       <argument>^/superadmin</argument>
     </service>
-    <service id=".security.request_matcher.O7Tsk.w" class="Symfony\Component\HttpFoundation\RequestMatcher">
-      <argument>^/register</argument>
+    <service id=".security.request_matcher.fY.Xgku" class="Symfony\Component\HttpFoundation\RequestMatcher">
+      <argument>^/registerAdmin</argument>
+    </service>
+    <service id=".security.request_matcher.ewxpIXl" class="Symfony\Component\HttpFoundation\RequestMatcher">
+      <argument>^/registerInfirmiere</argument>
+    </service>
+    <service id=".security.request_matcher.vxRYpdi" class="Symfony\Component\HttpFoundation\RequestMatcher">
+      <argument>^/registerSecretaire</argument>
     </service>
     <service id=".security.request_matcher.jY57yW8" class="Symfony\Component\HttpFoundation\RequestMatcher">
       <argument>^/bedAdd</argument>
