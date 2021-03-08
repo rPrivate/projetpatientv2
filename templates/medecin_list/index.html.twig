@@ -14,7 +14,9 @@
 
     </div>
     {% endfor %}
-    <button class="btn btn-primary" href="{{ path("medecinadd")}}">
+    {% if is_granted('ROLE_SECRETAIRE')%}
+    <a class="btn btn-primary" href="{{ path("medecinadd")}}">
         Ajouter medecin
-    </button>
+    </a>
+    {% endif %}
 {% endblock %}

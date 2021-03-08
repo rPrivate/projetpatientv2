@@ -119,12 +119,16 @@ class __TwigTemplate_50f12b06070be70a2c139abda5d3c961963214281cbc17065575c5c070e
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['medecin'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 17
-        echo "    <button class=\"btn btn-primary\" href=\"";
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("medecinadd");
-        echo "\">
+        echo "    ";
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_SECRETAIRE")) {
+            // line 18
+            echo "    <a class=\"btn btn-primary\" href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("medecinadd");
+            echo "\">
         Ajouter medecin
-    </button>
-";
+    </a>
+    ";
+        }
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -145,7 +149,7 @@ class __TwigTemplate_50f12b06070be70a2c139abda5d3c961963214281cbc17065575c5c070e
 
     public function getDebugInfo()
     {
-        return array (  122 => 17,  111 => 12,  107 => 11,  103 => 10,  97 => 9,  93 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  125 => 18,  122 => 17,  111 => 12,  107 => 11,  103 => 10,  97 => 9,  93 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -166,9 +170,11 @@ class __TwigTemplate_50f12b06070be70a2c139abda5d3c961963214281cbc17065575c5c070e
 
     </div>
     {% endfor %}
-    <button class=\"btn btn-primary\" href=\"{{ path(\"medecinadd\")}}\">
+    {% if is_granted('ROLE_SECRETAIRE')%}
+    <a class=\"btn btn-primary\" href=\"{{ path(\"medecinadd\")}}\">
         Ajouter medecin
-    </button>
+    </a>
+    {% endif %}
 {% endblock %}
 ", "medecin_list/index.html.twig", "D:\\Project\\projetpatientv2\\templates\\medecin_list\\index.html.twig");
     }
