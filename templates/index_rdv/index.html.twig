@@ -4,15 +4,24 @@
 {% block body %}
     {% include 'navbar.html.twig' %}
     {% if is_granted('ROLE_PATIENT') and not is_granted('ROLE_SECRETAIRE') %}
-        <button type="button" class="btn btn-secondary btn-lg"><a style="color: white" href="{{ path("medecinliste") }}">Prendre Rendez-vous</a></button>
-        <button type="button" class="btn btn-secondary btn-lg"><a style="color: white" href="{{ path("rdv_listWaitPatient") }}">Voir les rendez-vous en attente</a></button>
-        <button type="button" class="btn btn-secondary btn-lg"><a style="color: white" href="{{ path("rdv_listAccept") }}">Voir mes rendez-vous</a></button>
+        <center>
+            <DIV STYLE="margin-top: 250PX">
+                <button type="button" class="btn btn-secondary btn-lg"><a style="color: white" href="{{ path("medecinliste") }}">Prendre Rendez-vous</a></button>
+                <button type="button" class="btn btn-secondary btn-lg"><a style="color: white" href="{{ path("rdv_listWaitPatient") }}">Voir les rendez-vous en attente</a></button>
+                <button type="button" class="btn btn-secondary btn-lg"><a style="color: white" href="{{ path("rdv_listAccept") }}">Voir mes rendez-vous</a></button>
+            </DIV>
+        </center>
+
     {% endif %}
     {% if is_granted('ROLE_SECRETAIRE') %}
-        <button type="button" class="btn btn-secondary btn-lg"><a style="color: white" href="{{ path("rdv_listWait") }}">Voir les rendez-vous en attente</a></button>
-        <button type="button" class="btn btn-secondary btn-lg"><a style="color: white" href="{{ path("rdv_listAll") }}">Voir les demandes de rendez-vous</a></button>
-        <button type="button" class="btn btn-secondary btn-lg"><a style="color: white" href="{{ path("medecinliste") }}">Voir les médecins</a></button>
+        <center>
+            <DIV STYLE="margin-top: 250PX">
+                <button type="button" class="btn btn-secondary btn-lg" style="margin-left: auto;margin-top: auto;margin-right: auto"><a style="color: white" href="{{ path("rdv_listWait") }}">Voir les rendez-vous en attente</a></button>
+                <button type="button" class="btn btn-secondary btn-lg" style="margin-left: auto;margin-top: auto;margin-right: auto"><a style="color: white" href="{{ path("rdv_listAll") }}">Voir les demandes de rendez-vous</a></button>
+                <button type="button" class="btn btn-secondary btn-lg" style="margin-left: auto;margin-top: auto;margin-right: auto"><a style="color: white" href="{{ path("medecinliste") }}">Voir les médecins</a></button>
 
+            </DIV>
+        </center>
     {% endif %}
 
 {% endblock %}

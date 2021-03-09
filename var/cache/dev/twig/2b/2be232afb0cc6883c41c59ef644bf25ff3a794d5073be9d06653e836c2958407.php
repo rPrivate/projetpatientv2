@@ -71,38 +71,49 @@ class __TwigTemplate_6a6e41de7987a2babc4f8a8dd8659d69b5253723c0ca8e900aa4f099aac
         echo "    ";
         if (($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_PATIENT") &&  !$this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_SECRETAIRE"))) {
             // line 7
-            echo "        <button type=\"button\" class=\"btn btn-secondary btn-lg\"><a style=\"color: white\" href=\"";
+            echo "        <center>
+            <DIV STYLE=\"margin-top: 250PX\">
+                <button type=\"button\" class=\"btn btn-secondary btn-lg\"><a style=\"color: white\" href=\"";
+            // line 9
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("medecinliste");
             echo "\">Prendre Rendez-vous</a></button>
-        <button type=\"button\" class=\"btn btn-secondary btn-lg\"><a style=\"color: white\" href=\"";
-            // line 8
+                <button type=\"button\" class=\"btn btn-secondary btn-lg\"><a style=\"color: white\" href=\"";
+            // line 10
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("rdv_listWaitPatient");
             echo "\">Voir les rendez-vous en attente</a></button>
-        <button type=\"button\" class=\"btn btn-secondary btn-lg\"><a style=\"color: white\" href=\"";
-            // line 9
+                <button type=\"button\" class=\"btn btn-secondary btn-lg\"><a style=\"color: white\" href=\"";
+            // line 11
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("rdv_listAccept");
             echo "\">Voir mes rendez-vous</a></button>
-    ";
-        }
-        // line 11
-        echo "    ";
-        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_SECRETAIRE")) {
-            // line 12
-            echo "        <button type=\"button\" class=\"btn btn-secondary btn-lg\"><a style=\"color: white\" href=\"";
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("rdv_listWait");
-            echo "\">Voir les rendez-vous en attente</a></button>
-        <button type=\"button\" class=\"btn btn-secondary btn-lg\"><a style=\"color: white\" href=\"";
-            // line 13
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("rdv_listAll");
-            echo "\">Voir les demandes de rendez-vous</a></button>
-        <button type=\"button\" class=\"btn btn-secondary btn-lg\"><a style=\"color: white\" href=\"";
-            // line 14
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("medecinliste");
-            echo "\">Voir les médecins</a></button>
+            </DIV>
+        </center>
 
     ";
         }
-        // line 17
+        // line 16
+        echo "    ";
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_SECRETAIRE")) {
+            // line 17
+            echo "        <center>
+            <DIV STYLE=\"margin-top: 250PX\">
+                <button type=\"button\" class=\"btn btn-secondary btn-lg\" style=\"margin-left: auto;margin-top: auto;margin-right: auto\"><a style=\"color: white\" href=\"";
+            // line 19
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("rdv_listWait");
+            echo "\">Voir les rendez-vous en attente</a></button>
+                <button type=\"button\" class=\"btn btn-secondary btn-lg\" style=\"margin-left: auto;margin-top: auto;margin-right: auto\"><a style=\"color: white\" href=\"";
+            // line 20
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("rdv_listAll");
+            echo "\">Voir les demandes de rendez-vous</a></button>
+                <button type=\"button\" class=\"btn btn-secondary btn-lg\" style=\"margin-left: auto;margin-top: auto;margin-right: auto\"><a style=\"color: white\" href=\"";
+            // line 21
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("medecinliste");
+            echo "\">Voir les médecins</a></button>
+
+            </DIV>
+        </center>
+    ";
+        }
+        // line 26
         echo "
 ";
         
@@ -125,7 +136,7 @@ class __TwigTemplate_6a6e41de7987a2babc4f8a8dd8659d69b5253723c0ca8e900aa4f099aac
 
     public function getDebugInfo()
     {
-        return array (  106 => 17,  100 => 14,  96 => 13,  91 => 12,  88 => 11,  83 => 9,  79 => 8,  74 => 7,  71 => 6,  68 => 5,  58 => 4,  35 => 1,);
+        return array (  117 => 26,  109 => 21,  105 => 20,  101 => 19,  97 => 17,  94 => 16,  86 => 11,  82 => 10,  78 => 9,  74 => 7,  71 => 6,  68 => 5,  58 => 4,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -136,18 +147,27 @@ class __TwigTemplate_6a6e41de7987a2babc4f8a8dd8659d69b5253723c0ca8e900aa4f099aac
 {% block body %}
     {% include 'navbar.html.twig' %}
     {% if is_granted('ROLE_PATIENT') and not is_granted('ROLE_SECRETAIRE') %}
-        <button type=\"button\" class=\"btn btn-secondary btn-lg\"><a style=\"color: white\" href=\"{{ path(\"medecinliste\") }}\">Prendre Rendez-vous</a></button>
-        <button type=\"button\" class=\"btn btn-secondary btn-lg\"><a style=\"color: white\" href=\"{{ path(\"rdv_listWaitPatient\") }}\">Voir les rendez-vous en attente</a></button>
-        <button type=\"button\" class=\"btn btn-secondary btn-lg\"><a style=\"color: white\" href=\"{{ path(\"rdv_listAccept\") }}\">Voir mes rendez-vous</a></button>
+        <center>
+            <DIV STYLE=\"margin-top: 250PX\">
+                <button type=\"button\" class=\"btn btn-secondary btn-lg\"><a style=\"color: white\" href=\"{{ path(\"medecinliste\") }}\">Prendre Rendez-vous</a></button>
+                <button type=\"button\" class=\"btn btn-secondary btn-lg\"><a style=\"color: white\" href=\"{{ path(\"rdv_listWaitPatient\") }}\">Voir les rendez-vous en attente</a></button>
+                <button type=\"button\" class=\"btn btn-secondary btn-lg\"><a style=\"color: white\" href=\"{{ path(\"rdv_listAccept\") }}\">Voir mes rendez-vous</a></button>
+            </DIV>
+        </center>
+
     {% endif %}
     {% if is_granted('ROLE_SECRETAIRE') %}
-        <button type=\"button\" class=\"btn btn-secondary btn-lg\"><a style=\"color: white\" href=\"{{ path(\"rdv_listWait\") }}\">Voir les rendez-vous en attente</a></button>
-        <button type=\"button\" class=\"btn btn-secondary btn-lg\"><a style=\"color: white\" href=\"{{ path(\"rdv_listAll\") }}\">Voir les demandes de rendez-vous</a></button>
-        <button type=\"button\" class=\"btn btn-secondary btn-lg\"><a style=\"color: white\" href=\"{{ path(\"medecinliste\") }}\">Voir les médecins</a></button>
+        <center>
+            <DIV STYLE=\"margin-top: 250PX\">
+                <button type=\"button\" class=\"btn btn-secondary btn-lg\" style=\"margin-left: auto;margin-top: auto;margin-right: auto\"><a style=\"color: white\" href=\"{{ path(\"rdv_listWait\") }}\">Voir les rendez-vous en attente</a></button>
+                <button type=\"button\" class=\"btn btn-secondary btn-lg\" style=\"margin-left: auto;margin-top: auto;margin-right: auto\"><a style=\"color: white\" href=\"{{ path(\"rdv_listAll\") }}\">Voir les demandes de rendez-vous</a></button>
+                <button type=\"button\" class=\"btn btn-secondary btn-lg\" style=\"margin-left: auto;margin-top: auto;margin-right: auto\"><a style=\"color: white\" href=\"{{ path(\"medecinliste\") }}\">Voir les médecins</a></button>
 
+            </DIV>
+        </center>
     {% endif %}
 
 {% endblock %}
-", "index_rdv/index.html.twig", "C:\\wamp64\\www\\projetpatientv2\\templates\\index_rdv\\index.html.twig");
+", "index_rdv/index.html.twig", "D:\\Project\\projetpatientv2\\templates\\index_rdv\\index.html.twig");
     }
 }

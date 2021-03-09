@@ -1,4 +1,18 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}{% endblock %}
+{% block body %}
+    {% block stylesheets %}
+
+        <link href="{{ asset('css/homepage.css') }}" rel="stylesheet"/>
+    {% endblock %}
+    {% include 'navbar.html.twig' %}
+
+    <h1 style="margin-top: 250px ;
+    height: 200px;
+    text-align: center;
+    font-size: 200px;">
+
+        PPE HOPITAL
+    </h1>
+{% endblock %}
 

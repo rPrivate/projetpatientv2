@@ -74,7 +74,7 @@ class __TwigTemplate_50f12b06070be70a2c139abda5d3c961963214281cbc17065575c5c070e
 
     }
 
-    // line 5
+    // line 4
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -84,6 +84,9 @@ class __TwigTemplate_50f12b06070be70a2c139abda5d3c961963214281cbc17065575c5c070e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
+        // line 5
+        echo "    ";
+        $this->loadTemplate("navbar.html.twig", "medecin_list/index.html.twig", 5)->display($context);
         // line 6
         echo "    ";
         $context['_parent'] = $context;
@@ -155,7 +158,7 @@ class __TwigTemplate_50f12b06070be70a2c139abda5d3c961963214281cbc17065575c5c070e
 
     public function getDebugInfo()
     {
-        return array (  131 => 20,  128 => 19,  119 => 15,  113 => 13,  111 => 12,  107 => 11,  103 => 10,  97 => 9,  93 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  134 => 20,  131 => 19,  122 => 15,  116 => 13,  114 => 12,  110 => 11,  106 => 10,  100 => 9,  96 => 7,  91 => 6,  88 => 5,  78 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -163,8 +166,8 @@ class __TwigTemplate_50f12b06070be70a2c139abda5d3c961963214281cbc17065575c5c070e
         return new Source("{% extends 'base.html.twig' %}
 
 {% block title %}Hello MedecinListController!{% endblock %}
-
 {% block body %}
+    {% include 'navbar.html.twig' %}
     {% for medecin in medecins %}
     <div class=\"card\" style=\"width: 18rem;\">
         <div class=\"card-body\">
@@ -184,6 +187,6 @@ class __TwigTemplate_50f12b06070be70a2c139abda5d3c961963214281cbc17065575c5c070e
     </a>
     {% endif %}
 {% endblock %}
-", "medecin_list/index.html.twig", "C:\\wamp64\\www\\projetpatientv2\\templates\\medecin_list\\index.html.twig");
+", "medecin_list/index.html.twig", "D:\\Project\\projetpatientv2\\templates\\medecin_list\\index.html.twig");
     }
 }
