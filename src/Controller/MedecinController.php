@@ -7,6 +7,7 @@ use App\Entity\RendezVous;
 use App\Form\MedecinAddType;
 use App\Repository\MedecinRepository;
 use App\Repository\RendezVousRepository;
+use Doctrine\DBAL\Types\TextType;
 use Doctrine\ORM\EntityManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -36,7 +37,7 @@ class MedecinController extends AbstractController
      * @Route("/medecin", name="medecin")
      */
 
-    public function index(MedecinRepository $repository): Response
+    public function index(MedecinRepository $repository, RendezVousRepository $rendezVousRepository): Response
     {
         if (isset($_GET["action"])) {
 
@@ -46,10 +47,37 @@ class MedecinController extends AbstractController
                 case "view":
                     $id = $_GET["id"];
                     $medecin = $repository->find($id);
+                    $events = $rendezVousRepository->findBy(["Medecin" => $id]);
+                    $rdvs = [];
+                    foreach ($events as $event) {
+                        if($event->getEtat() == "En attente"){
+                            $rdvs[] = [
+                                'id' => $event->getId(),
+                                'title' => "Réservé",
+                                'start' => $event->getHeure()->format("Y-m-d H:i:s"),
+                                "etat" => $event->getEtat(),
+                                'textColor' => "green",
+
+                            ];
+                        }
+                        else{
+                            $rdvs[] = [
+                                'id' => $event->getId(),
+                                'title' => "Complet",
+                                'textColor' => "green",
+                                'start' => $event->getHeure()->format("Y-m-d H:i:s"),
+                                "etat" => $event->getEtat()
+
+                            ];
+                        }
+                    }
+
+                    $datas = json_encode($rdvs);
                     return $this->render('medecin/index.html.twig', [
                         'controller_name' => 'MedecinController',
                         'medecin' => $medecin,
-                        'id' => $id
+                        'id' => $id,
+                        'datas' => $datas
                     ]);
                 case "del":
                     $id = $_GET["id"];
@@ -148,7 +176,8 @@ class MedecinController extends AbstractController
         }
         return $this->render('medecin/rdvAdd.html.twig', [
             'controller_name' => 'MedecinController',
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            'medecin' => $medecin
         ]);
     }
 

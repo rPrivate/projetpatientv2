@@ -1,9 +1,37 @@
 {% extends 'base.html.twig' %}
-
 {% block title %}Hello MedecinController!{% endblock %}
+{% block stylesheets %}
+    <style>
+        #calendrier : {
+            width: 100%;
+            min-height: 80vh;
+            margin: auto;
+        }
+    </style>
+{% endblock %}
 {% block body %}
     {% include 'navbar.html.twig' %}
-    <h1 style="text-align: center">Dr.{{ medecin.prenom }} {{ medecin.nom }}</h1>
-    <h3 style="text-align: center"> Disponibilité</h3>
-    <button type="button" class="btn btn-secondary btn-lg"><a href="{{ path("rdvAdd", {id: medecin.id}) }}">Ajouter Rendez-vous</a></button>
+    <a href="{{ path("rdvAdd", {id : medecin.id}) }}">Prendre Rendez-vous</a>
+    <div id="calendrier"></div>
+{% endblock %}
+{% block javascripts %}
+    <script>
+        window.onload = () => {
+            let calendarElt = document.querySelector("#calendrier");
+
+            let calendar = new FullCalendar.Calendar(calendarElt, {
+                initialView : 'dayGridMonth',
+                locale : 'fr',
+                timeZone : "Europe/Paris",
+                headerToolbar : {
+                    start: 'prev,next,today',
+                    center : "title",
+                    end : "dayGridMonth,timeGridWeek"
+                },
+                events : {{ datas|raw }}
+            });
+
+            calendar.render();
+        }
+    </script>
 {% endblock %}

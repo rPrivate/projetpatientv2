@@ -59,17 +59,20 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
         echo "        <link href=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/header.css"), "html", null, true);
         echo "\" rel=\"stylesheet\"/>
+        <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@5.5.1/main.min.css\" integrity=\"sha256-LOn2s1oZo044zPt6G3x2mGJnhtfXp6ZE1skHztfqnA8=\" crossorigin=\"anonymous\">
 
     </head>
     <body>
         ";
-        // line 14
-        $this->displayBlock('body', $context, $blocks);
         // line 15
+        $this->displayBlock('body', $context, $blocks);
+        // line 16
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 16
-        echo "    </body>
+        // line 18
+        echo "        <script src=\"https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@5.5.1/main.min.js\" integrity=\"sha256-9puLsDK3mkUV8FSsGLlSRT+uJogUINfaCq56mzSUP/w=\" crossorigin=\"anonymous\"></script>
+
+    </body>
 </html>
 ";
         
@@ -121,7 +124,7 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
 
     }
 
-    // line 14
+    // line 15
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -139,7 +142,7 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
 
     }
 
-    // line 15
+    // line 16
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -149,6 +152,8 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
+        // line 17
+        echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -169,7 +174,7 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
 
     public function getDebugInfo()
     {
-        return array (  143 => 15,  125 => 14,  113 => 7,  103 => 6,  84 => 5,  72 => 16,  69 => 15,  67 => 14,  59 => 10,  57 => 6,  53 => 5,  47 => 1,);
+        return array (  156 => 17,  146 => 16,  128 => 15,  116 => 7,  106 => 6,  87 => 5,  73 => 18,  70 => 16,  68 => 15,  59 => 10,  57 => 6,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -184,13 +189,17 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
             <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1\" crossorigin=\"anonymous\">
             {% endblock %}
         <link href=\"{{ asset('css/header.css') }}\" rel=\"stylesheet\"/>
+        <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@5.5.1/main.min.css\" integrity=\"sha256-LOn2s1oZo044zPt6G3x2mGJnhtfXp6ZE1skHztfqnA8=\" crossorigin=\"anonymous\">
 
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+        {% endblock %}
+        <script src=\"https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@5.5.1/main.min.js\" integrity=\"sha256-9puLsDK3mkUV8FSsGLlSRT+uJogUINfaCq56mzSUP/w=\" crossorigin=\"anonymous\"></script>
+
     </body>
 </html>
-", "base.html.twig", "D:\\Project\\projetpatientv2\\templates\\base.html.twig");
+", "base.html.twig", "C:\\Users\\33769\\Desktop\\ppe2\\projetpatientv2\\templates\\base.html.twig");
     }
 }
