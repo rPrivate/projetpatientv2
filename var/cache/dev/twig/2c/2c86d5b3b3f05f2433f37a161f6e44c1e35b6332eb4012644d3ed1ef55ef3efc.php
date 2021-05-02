@@ -88,10 +88,18 @@ class __TwigTemplate_5ed59f96910dd7586dea067e7919b34eee1654d3042a34e11352fbf60d4
 
         // line 4
         echo "    <style>
-        #calendrier : {
+        #calendrier {
             width: 100%;
-            min-height: 80vh;
             margin: auto;
+        }
+        a#rdv {
+            display: inline-block;
+            color : white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            background: #17324f;
+            margin : 1rem;
         }
     </style>
 ";
@@ -103,7 +111,7 @@ class __TwigTemplate_5ed59f96910dd7586dea067e7919b34eee1654d3042a34e11352fbf60d4
 
     }
 
-    // line 12
+    // line 20
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -113,12 +121,12 @@ class __TwigTemplate_5ed59f96910dd7586dea067e7919b34eee1654d3042a34e11352fbf60d4
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 13
+        // line 21
         echo "    ";
-        $this->loadTemplate("navbar.html.twig", "medecin/index.html.twig", 13)->display($context);
-        // line 14
-        echo "    <a href=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("rdvAdd", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["medecin"]) || array_key_exists("medecin", $context) ? $context["medecin"] : (function () { throw new RuntimeError('Variable "medecin" does not exist.', 14, $this->source); })()), "id", [], "any", false, false, false, 14)]), "html", null, true);
+        $this->loadTemplate("navbar.html.twig", "medecin/index.html.twig", 21)->display($context);
+        // line 22
+        echo "    <a id=\"rdv\" href=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("rdvAdd", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["medecin"]) || array_key_exists("medecin", $context) ? $context["medecin"] : (function () { throw new RuntimeError('Variable "medecin" does not exist.', 22, $this->source); })()), "id", [], "any", false, false, false, 22)]), "html", null, true);
         echo "\">Prendre Rendez-vous</a>
     <div id=\"calendrier\"></div>
 ";
@@ -130,7 +138,7 @@ class __TwigTemplate_5ed59f96910dd7586dea067e7919b34eee1654d3042a34e11352fbf60d4
 
     }
 
-    // line 17
+    // line 25
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -140,13 +148,13 @@ class __TwigTemplate_5ed59f96910dd7586dea067e7919b34eee1654d3042a34e11352fbf60d4
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 18
+        // line 26
         echo "    <script>
         window.onload = () => {
             let calendarElt = document.querySelector(\"#calendrier\");
 
             let calendar = new FullCalendar.Calendar(calendarElt, {
-                initialView : 'dayGridMonth',
+                initialView : 'dayGridWeek',
                 locale : 'fr',
                 timeZone : \"Europe/Paris\",
                 headerToolbar : {
@@ -155,8 +163,8 @@ class __TwigTemplate_5ed59f96910dd7586dea067e7919b34eee1654d3042a34e11352fbf60d4
                     end : \"dayGridMonth,timeGridWeek\"
                 },
                 events : ";
-        // line 31
-        echo (isset($context["datas"]) || array_key_exists("datas", $context) ? $context["datas"] : (function () { throw new RuntimeError('Variable "datas" does not exist.', 31, $this->source); })());
+        // line 39
+        echo (isset($context["datas"]) || array_key_exists("datas", $context) ? $context["datas"] : (function () { throw new RuntimeError('Variable "datas" does not exist.', 39, $this->source); })());
         echo "
             });
 
@@ -184,7 +192,7 @@ class __TwigTemplate_5ed59f96910dd7586dea067e7919b34eee1654d3042a34e11352fbf60d4
 
     public function getDebugInfo()
     {
-        return array (  159 => 31,  144 => 18,  134 => 17,  120 => 14,  117 => 13,  107 => 12,  90 => 4,  80 => 3,  61 => 2,  38 => 1,);
+        return array (  167 => 39,  152 => 26,  142 => 25,  128 => 22,  125 => 21,  115 => 20,  90 => 4,  80 => 3,  61 => 2,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -193,16 +201,24 @@ class __TwigTemplate_5ed59f96910dd7586dea067e7919b34eee1654d3042a34e11352fbf60d4
 {% block title %}Hello MedecinController!{% endblock %}
 {% block stylesheets %}
     <style>
-        #calendrier : {
+        #calendrier {
             width: 100%;
-            min-height: 80vh;
             margin: auto;
+        }
+        a#rdv {
+            display: inline-block;
+            color : white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            background: #17324f;
+            margin : 1rem;
         }
     </style>
 {% endblock %}
 {% block body %}
     {% include 'navbar.html.twig' %}
-    <a href=\"{{ path(\"rdvAdd\", {id : medecin.id}) }}\">Prendre Rendez-vous</a>
+    <a id=\"rdv\" href=\"{{ path(\"rdvAdd\", {id : medecin.id}) }}\">Prendre Rendez-vous</a>
     <div id=\"calendrier\"></div>
 {% endblock %}
 {% block javascripts %}
@@ -211,7 +227,7 @@ class __TwigTemplate_5ed59f96910dd7586dea067e7919b34eee1654d3042a34e11352fbf60d4
             let calendarElt = document.querySelector(\"#calendrier\");
 
             let calendar = new FullCalendar.Calendar(calendarElt, {
-                initialView : 'dayGridMonth',
+                initialView : 'dayGridWeek',
                 locale : 'fr',
                 timeZone : \"Europe/Paris\",
                 headerToolbar : {

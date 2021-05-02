@@ -56,7 +56,7 @@ class MedecinController extends AbstractController
                                 'title' => "Réservé",
                                 'start' => $event->getHeure()->format("Y-m-d H:i:s"),
                                 "etat" => $event->getEtat(),
-                                'textColor' => "green",
+                                'textColor' => "orange",
 
                             ];
                         }

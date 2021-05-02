@@ -2,16 +2,24 @@
 {% block title %}Hello MedecinController!{% endblock %}
 {% block stylesheets %}
     <style>
-        #calendrier : {
+        #calendrier {
             width: 100%;
-            min-height: 80vh;
             margin: auto;
+        }
+        a#rdv {
+            display: inline-block;
+            color : white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            background: #17324f;
+            margin : 1rem;
         }
     </style>
 {% endblock %}
 {% block body %}
     {% include 'navbar.html.twig' %}
-    <a href="{{ path("rdvAdd", {id : medecin.id}) }}">Prendre Rendez-vous</a>
+    <a id="rdv" href="{{ path("rdvAdd", {id : medecin.id}) }}">Prendre Rendez-vous</a>
     <div id="calendrier"></div>
 {% endblock %}
 {% block javascripts %}
@@ -20,7 +28,7 @@
             let calendarElt = document.querySelector("#calendrier");
 
             let calendar = new FullCalendar.Calendar(calendarElt, {
-                initialView : 'dayGridMonth',
+                initialView : 'dayGridWeek',
                 locale : 'fr',
                 timeZone : "Europe/Paris",
                 headerToolbar : {
