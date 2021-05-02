@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\User;
+use App\Repository\RendezVousRepository;
 use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
@@ -29,11 +30,15 @@ class AdminController extends AbstractController
     /**
      * @Route("/superadminDel", name="superadminDel")
      */
-    public function del(UserRepository $users): Response
+    public function del(UserRepository $users, RendezVousRepository $rdvs): Response
     {
         $id = $_GET["id"];
         $del = $users->find($id);
+        $delrdvs = $rdvs->findBy(['Patient'=>$id]);
         $em = $this->getDoctrine()->getManager();
+        foreach ($delrdvs as $delrdv) {
+            $em->remove($delrdv);
+        }
         $em->remove($del);
         $em->flush();
         return $this->redirectToRoute('superadmin');
